@@ -7,7 +7,7 @@ import { fetchData, logIn } from "./components/fetchingData";
 
 function App() {
   logIn("Aleksander", "CHelovechek17");
-  fetchData();
+  const data = fetchData();
   return (
     <div>
       <Message />
