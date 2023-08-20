@@ -1,6 +1,7 @@
-import { json } from "stream/consumers";
-
-export const logIn = async (email: string, password: string) => {
+export const fetchLogin = async (
+  email: FormDataEntryValue | null,
+  password: FormDataEntryValue | null
+) => {
   let response = await fetch("https://01.kood.tech/api/auth/signin", {
     method: "POST",
     body: btoa(`${email}:${password}`),
@@ -18,6 +19,14 @@ export const logIn = async (email: string, password: string) => {
   return false;
 };
 
+const query = `
+    {
+      user {
+        firstName
+      }
+    }
+  `;
+
 export const fetchData = async () => {
   let token = localStorage.getItem("token");
 
@@ -31,7 +40,7 @@ export const fetchData = async () => {
     {
       method: "POST",
       body: JSON.stringify({
-        query: "{ user {id}}",
+        query: query,
       }),
       headers: {
         "Content-Type": "application/json",
