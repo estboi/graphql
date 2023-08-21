@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import LoginPage from "./components/login";
 import MainPage from "./components/mainPage";
-import { fetchData, fetchLogin } from "./components/fetchingData";
+import { fetchLogin } from "./components/fetchingData";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -23,7 +23,6 @@ function App() {
     localStorage.removeItem("token");
   };
 
-  fetchData();
   return (
     <div id="App">
       {user ? (

@@ -20,11 +20,14 @@ export const fetchLogin = async (
 };
 
 const query = `
-    {
-      user {
-        firstName
-      }
-    }
+{
+	user {
+    auditRatio
+    attrs
+    totalUp
+    totalDown
+  }
+}
   `;
 
 export const fetchData = async () => {
@@ -51,7 +54,6 @@ export const fetchData = async () => {
 
   if (response.status === 200) {
     const data = await response.json();
-    console.log(data);
     return data;
   }
   return "error";
