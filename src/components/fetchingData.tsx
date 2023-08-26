@@ -24,8 +24,38 @@ const query = `
 	user {
     auditRatio
     attrs
-    totalUp
-    totalDown
+
+
+    mystats:transactions(where: {
+			type: {_eq:"xp"}
+			path:{_regex:"div-0"}
+			_and: {_not:{path:{_regex:"piscine-js"}}}
+		}
+		order_by: {createdAt:asc})
+    {
+      type
+      amount
+      object {
+        name
+      }
+    }
+
+
+    audits:transactions(where: {
+			_or: [
+				{type: {_eq:"down"}}
+				{type: {_eq:"up"}}	
+			]
+		})
+    {
+      type
+      amount
+      object {
+        name
+      }
+    }
+
+
   }
 }
   `;

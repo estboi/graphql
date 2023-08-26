@@ -3,11 +3,12 @@
 #App {
     height: 100vh;
     width: 100vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+
+#mainPage {
+    overflow-y: auto;
+    margin-top: 60px;
+    }
 
 #loginDiv {
     width: 40%;
@@ -17,6 +18,14 @@
     justify-content: center;
     padding: 2rem;
     border: 2px solid grey;
+}
+
+#loginPage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #loginForm {
@@ -49,9 +58,48 @@
     background-color: rgb(29, 29, 170);
 }
 
-/* PERSONAL BLOCK */
+/* HEADER */
+
+#Header {
+    background-color: rgb(156, 178, 231);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    width: 100vw;
+    border-bottom: 2px gray solid;
+    padding: 10px;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+#logoutButton {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* PERSONAL INFO BLOCK */
+
+#myInfo {
+    width: 100vw;
+    display: flex;
+}
 
 #PersonalBlock {
     padding: 1rem;
     border: 2px solid grey;
+    margin: 2rem;
+    max-width: 100%;
+}
+
+#AuditBlock {
+    max-width: 430px;
+    padding: 15px;
+    border: 2px solid grey;
+    margin: 2rem;
+    width: 40%;
+    align-items: center;
+    text-align: center;
 }

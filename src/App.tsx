@@ -18,7 +18,7 @@ function App() {
     setUser(loggedIn);
   };
 
-  const handleLogout = () => {
+  const Logout = () => {
     setUser(false);
     localStorage.removeItem("token");
   };
@@ -26,7 +26,7 @@ function App() {
   return (
     <div id="App">
       {user ? (
-        <MainPage login={setUser} handleLogout={handleLogout}></MainPage>
+        <MainPage login={setUser} Logout={Logout}></MainPage>
       ) : (
         <LoginPage handleSubmit={handleSubmit}></LoginPage>
       )}

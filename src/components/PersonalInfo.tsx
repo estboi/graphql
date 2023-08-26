@@ -1,10 +1,9 @@
-function PersonalInfo({ otherData }: any) {
-  const personalData = otherData.data.user[0].attrs;
-  console.log(otherData);
+function PersonalInfo({ data }: any) {
+  const personalData = data.data.user[0].attrs;
   return (
     <div id="PersonalBlock">
-      <h2>Personal Information</h2>
-      {otherData ? (
+      <h3>Personal Information</h3>
+      {data ? (
         <div>
           <p>Name: {personalData.firstName + " " + personalData.lastName}</p>
           <p>Email: {personalData.email}</p>
