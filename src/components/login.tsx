@@ -6,7 +6,7 @@ function LoginPage({ handleSubmit }: any) {
         <form id="loginForm" onSubmit={handleSubmit}>
           <input
             className="input"
-            placeholder="username"
+            placeholder="username or email"
             name="username"
             required
           ></input>

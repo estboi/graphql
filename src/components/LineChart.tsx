@@ -17,17 +17,21 @@ function LineGraph({ data }: any) {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="amount" stroke="#8884d8" />
+        <Line type="monotone" dataKey="progress" stroke="#8884d8" />
       </LineChart>
     </div>
   );
 }
 
 function modifyData(data: any) {
+  let counter = 0;
   for (let task of data) {
     if (task.amount >= 1000) {
       task.amount /= 1000;
     }
+    counter += task.amount;
+    let roundedNum = Math.round(counter * 100) / 100;
+    task.progress = roundedNum;
   }
 }
 export default LineGraph;
