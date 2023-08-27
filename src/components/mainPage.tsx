@@ -3,6 +3,8 @@ import AuditRatio from "./AuditRatio";
 import { fetchData } from "./fetchingData";
 import PersonalInfo from "./PersonalInfo";
 import Header from "./Header";
+import ProgressBar from "./ProgressBar";
+import LineGraph from "./LineChart";
 
 function MainPage({ user, Logout }: any) {
   const [data, setData] = useState({});
@@ -25,9 +27,12 @@ function MainPage({ user, Logout }: any) {
       <div id="mainPage">
         <div id="myInfo">
           <PersonalInfo data={data} />
+          <LineGraph data={data} />
+        </div>
+        <div id="progressInfo">
+          <ProgressBar data={data} />
           <AuditRatio data={data} />
         </div>
-        <div id="progressInfo"></div>
       </div>
     </>
   );

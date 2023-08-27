@@ -9,10 +9,10 @@ function AuditRatio({ data }: any) {
     { name: "Recieved", value: downAudits.length, fill: "rgb(67, 67, 213)" },
   ];
   return (
-    <div id="AuditBlock">
+    <div id="progressGraph">
       <h3>Audits</h3>
       {data ? (
-        <div text-align="center" align-items="center">
+        <div text-align="center" align-items="center" justify-content="center">
           <PieChart width={400} height={400}>
             <Pie
               dataKey="value"
@@ -20,7 +20,7 @@ function AuditRatio({ data }: any) {
               data={pieChartData}
               cx={200}
               cy={200}
-              outerRadius={80}
+              outerRadius={120}
               fill="#8884d8"
               label
             />

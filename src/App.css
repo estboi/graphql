@@ -91,7 +91,7 @@
     padding: 1rem;
     border: 2px solid grey;
     margin: 2rem;
-    max-width: 100%;
+    width: 520px;
 }
 
 #AuditBlock {
@@ -102,4 +102,22 @@
     width: 40%;
     align-items: center;
     text-align: center;
+}
+
+/* PROGRESS BLOCK */
+
+#progressInfo {
+    display: flex;
+}
+
+#progressGraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px grey solid;
+    text-align: center;
+    width: 520px;
+    margin: 2rem;
+    padding: 1rem;
 }

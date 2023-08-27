@@ -22,9 +22,7 @@ export const fetchLogin = async (
 const query = `
 {
 	user {
-    auditRatio
     attrs
-
 
     mystats:transactions(where: {
 			type: {_eq:"xp"}
@@ -40,7 +38,6 @@ const query = `
       }
     }
 
-
     audits:transactions(where: {
 			_or: [
 				{type: {_eq:"down"}}
@@ -54,7 +51,6 @@ const query = `
         name
       }
     }
-
 
   }
 }

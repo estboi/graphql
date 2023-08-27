@@ -1,5 +1,3 @@
-import { fetchLogin } from "./fetchingData";
-
 function LoginPage({ handleSubmit }: any) {
   return (
     <div id="loginPage">
@@ -10,12 +8,14 @@ function LoginPage({ handleSubmit }: any) {
             className="input"
             placeholder="username"
             name="username"
+            required
           ></input>
           <input
             className="input"
             placeholder="password"
             name="password"
             type="password"
+            required
           ></input>
           <button className="submit" type="submit">
             SUBMIT
