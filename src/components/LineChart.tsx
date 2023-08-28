@@ -26,9 +26,8 @@ function LineGraph({ data }: any) {
 function modifyData(data: any) {
   let counter = 0;
   for (let task of data) {
-    if (task.amount >= 1000) {
-      task.amount /= 1000;
-    }
+    task.amount /= 1000;
+
     counter += task.amount;
     let roundedNum = Math.round(counter * 100) / 100;
     task.progress = roundedNum;

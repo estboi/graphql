@@ -25,9 +25,7 @@ function ProgressBar({ data }: any) {
 
 function modifyData(data: any) {
   for (let task of data) {
-    if (task.amount >= 1000) {
-      task.amount /= 1000;
-    }
+    task.amount /= 1000;
   }
 }
 
