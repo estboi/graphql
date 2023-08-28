@@ -14,6 +14,9 @@ function App() {
     const password = formData.get("password");
 
     const loggedIn = await fetchLogin(username, password);
+    if (!loggedIn) {
+      alert("Incorrect username or password");
+    }
 
     setUser(loggedIn);
   };
